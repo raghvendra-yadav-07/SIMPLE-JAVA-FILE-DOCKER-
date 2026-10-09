@@ -1,0 +1,7 @@
+FROM eclipse-temurin:21-jdk
+ENV ENV_APP=production
+WORKDIR /app
+COPY src/main.java /app/
+RUN  javac main.java
+CMD ["java","main"]
+EXPOSE 8080
